@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Identity Information</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: { primary: "#009A44" },
+      fontFamily: { display: ["Public Sans", "sans-serif"] },
+    },
+  },
+}
+</script>
+
+<style>
+  body { min-height: 100dvh; background-color: #F8F9FA; }
+</style>
+</head>
+
+<body class="bg-white font-display text-slate-800">
+
+<div class="mx-auto h-screen max-w-sm flex flex-col p-6">
+
+  <!-- Back Arrow -->
+  <div class="flex items-center gap-2 mb-6 cursor-pointer"
+       onclick="history.back()">
+    <span class="material-symbols-outlined text-3xl">arrow_back_ios_new</span>
+    <span class="text-lg font-semibold">Absher</span>
+  </div>
+
+  <h1 class="pb-1 text-3xl font-bold text-slate-900">Identity Information</h1>
+  <p class="pb-6 text-base text-slate-600">Link your national ID to your device</p>
+
+  <div class="space-y-5">
+
+    <!-- National ID -->
+    <div>
+      <label class="text-sm font-medium text-slate-700 block mb-2">National ID Number</label>
+      <input id="national-id" maxlength="10" type="number"
+             oninput="if(this.value.length > 10) this.value = this.value.slice(0,10)"
+             placeholder="Enter your 10-digit ID number"
+             class="form-input h-14 w-full rounded-lg border border-slate-300 bg-white px-4 py-3
+                    text-base text-slate-900 placeholder:text-slate-400
+                    focus:border-primary focus:ring-2 focus:ring-primary/20"/>
+    </div>
+
+    <!-- Date of Birth -->
+    <div>
+      <label class="text-sm font-medium text-slate-700 block mb-2">Date of Birth</label>
+      <input id="dob" type="text" placeholder="dd/mm/yyyy"
+             onfocus="this.type='date'" onblur="this.type='text'"
+             class="form-input h-14 w-full rounded-lg border border-slate-300 bg-white px-4 py-3"/>
+    </div>
+
+    <!-- Mobile Number -->
+    <div>
+      <label class="text-sm font-medium text-slate-700 block mb-2">Mobile Number</label>
+      <input id="mobile-number" type="tel" placeholder="Enter your phone number"
+             class="form-input h-14 w-full rounded-lg border border-slate-300 bg-white px-4 py-3"/>
+    </div>
+
+  </div>
+
+  <!-- Info text -->
+  <p class="text-center text-slate-500 text-sm mt-10">
+    You will not need the physical fingerprint machine again.
+  </p>
+
+  <!-- Button -->
+  <button onclick="window.location.href='code2.html'"
+          class="mt-6 h-14 w-full rounded-full bg-primary text-white text-base font-medium
+                 hover:bg-primary/90 transition">
+    Start Activation
+  </button>
+
+</div>
+
+<!-- Icon font -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</body>
+</html>

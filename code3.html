@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Activation Completed</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: "#009A44",
+      },
+      fontFamily: {
+        display: ["Public Sans"],
+      },
+    },
+  },
+};
+</script>
+
+<style>
+body {
+  min-height: 100vh;
+  background: #ffffff;
+  font-family: 'Public Sans';
+}
+</style>
+
+</head>
+<body>
+
+<div class="mx-auto max-w-sm min-h-screen flex flex-col justify-center items-center px-6 text-center">
+
+<!-- Success Icon -->
+<svg class="h-24 w-24 text-primary mb-6" fill="none" viewBox="0 0 24 24">
+  <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" fill="currentColor"/>
+</svg>
+
+<!-- Text -->
+<h1 class="text-2xl font-bold text-slate-900">Activation Completed</h1>
+<p class="text-slate-600 mt-2">
+  Your device is now securely linked to your Absher Identity.
+</p>
+
+<!-- Button -->
+<button
+  class="mt-10 w-full h-12 bg-primary text-white rounded-full font-semibold"
+  onclick="alert('Demo Complete — This would return to Absher App.')">
+  Go to Absher
+</button>
+
+</div>
+
+</body>
+</html>
